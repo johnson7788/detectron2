@@ -1,6 +1,6 @@
 ## Installation
 
-Our [Colab Notebook](https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5)
+Colab安装 [Colab Notebook](https://colab.research.google.com/drive/16jcaJoc6bCFAQ96jDe2HwtXj7BMD_-m5)
 has step-by-step instructions that install detectron2.
 The [Dockerfile](docker)
 also installs detectron2 with a few simple commands.
@@ -62,10 +62,9 @@ Choose from this table:
 
 
 Note that:
-1. The pre-built package has to be used with corresponding version of CUDA and official PyTorch release.
-   It will not work with a different version of PyTorch or a non-official build of PyTorch.
-2. Such installation is out-of-date w.r.t. master branch of detectron2. It may not be
-   compatible with the master branch of a research project that uses detectron2 (e.g. those in
+1.预先构建的软件包必须与相应版本的CUDA和PyTorch官方发行版一起使用。
+    它不适用于其他版本的PyTorch或非官方的PyTorch版本。
+2.此类安装已过时。 Detectron2的主分支。 它可能与使用detectron2的研究项目的主分支不兼容  (e.g. those in
    [projects](projects) or [meshrcnn](https://github.com/facebookresearch/meshrcnn/)).
 
 ### Common Installation Issues

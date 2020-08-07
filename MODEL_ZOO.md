@@ -2,26 +2,24 @@
 
 ## Introduction
 
-This file documents a large collection of baselines trained
-with detectron2 in Sep-Oct, 2019.
+该文件记录了2019年9月10日用detectron2训练的大量基准。
 All numbers were obtained on [Big Basin](https://engineering.fb.com/data-center-engineering/introducing-big-basin-our-next-generation-ai-hardware/)
 servers with 8 NVIDIA V100 GPUs & NVLink. The software in use were PyTorch 1.3, CUDA 9.2, cuDNN 7.4.2 or 7.6.3.
 You can access these models from code using [detectron2.model_zoo](https://detectron2.readthedocs.io/modules/model_zoo.html) APIs.
 
-In addition to these official baseline models, you can find more models in [projects/](projects/).
+除了这些官方基准模型，您还可以在 [projects/](projects/)找到更多模型.
 
 #### How to Read the Tables
-* The "Name" column contains a link to the config file. Running `tools/train_net.py` with this config file
+* The "Name" column 包含一个指向config file的链接. Running `tools/train_net.py` with this config file
   and 8 GPUs will reproduce the model.
-* Training speed is averaged across the entire training.
+* Training speed is 整个训练的平均速度
   We keep updating the speed with latest version of detectron2/pytorch/etc.,
   so they might be different from the `metrics` file.
   Training speed for multi-machine jobs is not provided.
-* Inference speed is measured by `tools/train_net.py --eval-only`, or [inference_on_dataset()](https://detectron2.readthedocs.io/modules/evaluation.html#detectron2.evaluation.inference_on_dataset),
+* Inference speed 推理速度 is measured by `tools/train_net.py --eval-only`, or [inference_on_dataset()](https://detectron2.readthedocs.io/modules/evaluation.html#detectron2.evaluation.inference_on_dataset),
   with batch size 1 in detectron2 directly.
   Measuring it with custom code may introduce other overhead.
-  Actual deployment in production should in general be faster than the given inference
-  speed due to more optimizations.
+  由于更多的优化，生产中的实际部署通常应比给定的推理速度更快。
 * The *model id* column is provided for ease of reference.
   To check downloaded file integrity, any model on this page contains its md5 prefix in its file name.
 * Training curves and other statistics can be found in `metrics` for each model.
@@ -29,9 +27,9 @@ In addition to these official baseline models, you can find more models in [proj
 #### Common Settings for COCO Models
 * All COCO models were trained on `train2017` and evaluated on `val2017`.
 * The default settings are __not directly comparable__ with Detectron's standard settings.
-  For example, our default training data augmentation uses scale jittering in addition to horizontal flipping.
+  例如，我们的默认训练数据扩充除了水平翻转外还使用了比例抖动。
 
-  To make fair comparisons with Detectron's settings, see
+  要与Detectron的设置进行公平比较，, see
   [Detectron1-Comparisons](configs/Detectron1-Comparisons/) for accuracy comparison,
   and [benchmarks](https://detectron2.readthedocs.io/notes/benchmarks.html)
   for speed comparison.
