@@ -1,13 +1,11 @@
 <img src=".github/Detectron2-Logo-Horz.svg" width="300" >
 
-etectron2是Facebook AI Research的下一代软件系统，可实现最新的对象检测算法。
+detectron2是Facebook AI Research的下一代软件系统，可实现最新的对象检测算法。
 这是对先前版本的完全重写，
 [Detectron](https://github.com/facebookresearch/Detectron/),
 and it originates from [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark/).
 
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/1381301/66535560-d3422200-eace-11e9-9123-5535d469db19.png"/>
-</div>
+![image](detectron2_res.png)
 
 ### What's New
 * 它由[PyTorch](https://pytorch.org)深度学习框架提供支持。
